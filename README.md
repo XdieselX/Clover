@@ -28,7 +28,7 @@ yarn build
 To use [Lanyard](https://github.com/Phineas/lanyard), join their server and add your Discord ID on line 52 of `gateway/lanyard.ts`
 
 ```sh
-export const lanyard = typeof window !== 'undefined' && new Lanyard('PASTE_ID_HERE');
+export const lanyard = new Lanyard('PASTE_ID_HERE');
 ```
 
 More information on Lanyard and how to use it can be found on its repo.
