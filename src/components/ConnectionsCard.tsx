@@ -1,7 +1,7 @@
 export function ConnectionsCard() {
   return (
     <div className="flex flex-initial flex-col flex-wrap items-stretch">
-      <div className="h-10 text-md w-auto relative flex items-center px-4 justify-between text-white bg-zinc-700 rounded">
+      <div className="h-12 text-md w-auto relative flex items-center px-4 justify-between text-white border border-transparent rounded">
         <div className="flex-row flex text-center items-center whitespace-nowrap text-ellipsis overflow-hidden space-x-1">
           {/* GitHub Icon */}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -31,7 +31,7 @@ export function ConnectionsCard() {
 
         {/* Arrow Link */}
         <a href="https://github.com/selim1337">
-          <svg aria-hidden="true" role="img" width="24" height="24" className="rotate-45" viewBox="0 0 24 24">
+          <svg aria-hidden="true" role="img" width="20" height="20" className="rotate-45" viewBox="0 0 24 24">
             <polygon fill="currentColor" fillRule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8" />
           </svg>
         </a>

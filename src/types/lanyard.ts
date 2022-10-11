@@ -4,7 +4,7 @@ export interface LanyardUser {
   spotify: Spotify;
   listening_to_spotify: boolean;
   kv: object;
-  discord_user: Partial<APIUser>;
+  discord_user: APIUser;
   discord_status: PresenceUpdateStatus;
   activities: GatewayActivity[];
   active_on_discord_web: boolean;

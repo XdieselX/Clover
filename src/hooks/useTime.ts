@@ -73,6 +73,14 @@ function getTime(timestamps: GatewayActivityTimestamps, removeZero: boolean): Ti
       completion: calc > 100 ? 100 : calc,
     };
   }
+  
+  if (start === end) {
+    return {
+      start: null,
+      end: null,
+      completion: null,
+    };
+  }
 
   return {
     start: `${hours ? `${hours}:` : ''}${padding(minutes, removeZero)}:${padding(seconds, removeZero)}`,

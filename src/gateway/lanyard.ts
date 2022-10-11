@@ -16,7 +16,7 @@ export class Lanyard {
     this.ws = new WebSocket('wss://api.lanyard.rest/socket');
 
     this.ws.onopen = () => {
-      console.info('Taking a peek huh? Check out the source code: https://github.com/selim1337/niskii.dev');
+      console.info('[Lanyard] Successfully connected\nTaking a peek huh? Check out the source code:\nhttps://github.com/selim1337/niskii.dev');
     };
     this.ws.onmessage = ({ data }) => {
       if (this.ws.readyState !== this.ws.OPEN) return;
@@ -34,13 +34,13 @@ export class Lanyard {
           break;
 
         default:
-          console.info(`[WS] Unknown message: ${data}`);
+          console.info(`[Lanyard] Unknown message: ${data}`);
       }
     };
 
     this.ws.onclose = ({ code }) => {
       clearInterval(this.heartbeat);
-      console.info(`[WS] Connection closed with code ${code}. Retrying in 1 second.`);
+      console.info(`[Lanyard] Connection closed with code ${code}. Retrying in 1 second.`);
 
       setTimeout(() => {
         this.connect(setUser);
@@ -49,4 +49,4 @@ export class Lanyard {
   }
 }
 
-export const lanyard = typeof window !== 'undefined' && new Lanyard('546303073962950657');
+export const lanyard = new Lanyard('546303073962950657');

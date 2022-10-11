@@ -4,7 +4,6 @@ import { CustomCard } from './activity/CustomCard';
 import { GameCard } from './activity/GameCard';
 import { SpotifyCard } from './activity/SpotifyCard';
 import { Avatar } from './Avatar';
-import { Discord } from './icons/Discord';
 import { ConnectionsCard } from './ConnectionsCard';
 
 interface CardProps {
@@ -23,12 +22,12 @@ export function ProfileCard({ data }: CardProps) {
           <picture>
             <source type="image/webp" srcSet="/images/banner.webp" />
             <source type="image/png" srcSet="/images/banner.png" />
-            <img src="/images/banner.webp" alt="banner" width="300" height="120" aria-hidden="true" draggable="false" className="block" />
+            <img src="/images/banner.webp" alt="banner" width="300" height="120" aria-hidden="true" draggable="false" className="block select-none" />
           </picture>
 
           {/* Avatar */}
           <div className="absolute top-[76px] left-[16px]">
-            <div className="rounded-full">
+            <div className="rounded-full select-none">
               <Avatar data={data} />
             </div>
           </div>
@@ -55,10 +54,9 @@ export function ProfileCard({ data }: CardProps) {
             <AboutCard />
 
             {/* Member Since */}
-            <div className="mb-3">
+            <div className="mb-3 select-none">
               <h2 className="font-bold text-xs text-slate-300 leading-4 mb-2 uppercase">Discord Member Since</h2>
               <span className="whitespace-pre-line text-normal">
-              <div className="absolute top-[347px] left-[15px]"><Discord /></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               Feb 16, 2019
               </span>
             </div>
@@ -69,7 +67,7 @@ export function ProfileCard({ data }: CardProps) {
 
             {/* Connections */}
             <div>
-              <h2 className="font-bold text-xs text-slate-300 leading-4 mb-2 uppercase">Connections</h2>
+              <h2 className="font-bold text-xs text-slate-300 leading-4 mb-2 uppercase select-none">Connections</h2>
               <ConnectionsCard />
             </div>
           </div>
